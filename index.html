@@ -13,11 +13,12 @@
         }
 
         body {
-            font-family: 'Circular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #000;
-            color: #fff;
-            overflow: hidden;
-        }
+    font-family: 'Circular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; 
+}
 
         /* Animated Background */
         body::before {
@@ -44,10 +45,11 @@
 
         .spotify-container {
             display: flex;
-            height: 100vh;
+            height: auto;
             gap: 8px;
             padding: 8px;
             animation: containerFadeIn 0.8s ease;
+            overflow-y:visible
         }
 
         @keyframes containerFadeIn {
