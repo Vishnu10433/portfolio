@@ -284,3 +284,12 @@ if (form) {
         }
     });
 }
+const themeBtn = document.getElementById("theme-toggle");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    themeBtn.innerHTML = document.body.classList.contains("light-mode")
+        ? `<i class="fas fa-moon"></i>`
+        : `<i class="fas fa-sun"></i>`;
+});
