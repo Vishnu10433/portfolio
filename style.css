@@ -13,6 +13,34 @@ body {
     -webkit-overflow-scrolling: touch;
     height: 100vh;
 }
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #1db954;
+    border: none;
+    color: #000;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(29,185,84,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+body.light-mode {
+    background: #f5f5f5 !important;
+    color: #000 !important;
+}
 
 /* Animated Background */
 body::before {
@@ -38,7 +66,7 @@ body::before {
 }
 
 /* Main Container - Fixed Height */
-.spotify-container {
+.green-container {
     display: flex;
     height: 100vh;
     gap: 8px;
@@ -1565,7 +1593,7 @@ body::before {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .spotify-container {
+    .green-container {
         flex-direction: column;
         height: auto;
         overflow-y: auto;
@@ -1631,4 +1659,216 @@ body::before {
 .certification-card::before,
 .certification-card::after {
     pointer-events: none !important;
+}
+
+
+
+/* Main containers */
+body.light-mode {
+    background: #f5f5f5 !important;
+    color: #000 !important;
+}
+
+body.light-mode .green-container {
+    background: #f5f5f5 !important;
+}
+
+/* Sidebar */
+body.light-mode .sidebar {
+    background: #ffffff !important;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1) !important;
+}
+
+body.light-mode .sidebar-top {
+    background: #ffffff !important;
+}
+
+/* Logo – FIX */
+body.light-mode .logo i {
+    color: #1db954 !important;
+    filter: none !important;
+}
+
+body.light-mode .brand-name {
+    color: #000 !important;
+    background: none !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+/* Profile section */
+body.light-mode .profile-section {
+    background: linear-gradient(180deg, #d5ffd5 0%, #ffffff 100%) !important;
+    color: #000 !important;
+}
+
+body.light-mode .profile-name {
+    color: #000 !important;
+}
+
+body.light-mode .profile-title {
+    color: #333 !important;
+}
+
+/* Navigation links */
+body.light-mode .nav-link {
+    color: #333 !important;
+}
+
+body.light-mode .nav-link:hover,
+body.light-mode .nav-link.active {
+    background: rgba(0,0,0,0.07) !important;
+    color: #000 !important;
+}
+
+body.light-mode .nav-link i {
+    color: #1db954 !important;
+}
+
+/* Main content */
+body.light-mode .main-content {
+    background: #ffffff !important;
+    color: #000 !important;
+}
+
+/* Section Titles FIX */
+body.light-mode .section-title {
+    color: #000 !important;
+}
+
+body.light-mode .section-title::before {
+    background: linear-gradient(90deg, #1db954, #1ed760) !important;
+}
+
+/* Cards (education, experience, achievements, etc.) */
+body.light-mode .card,
+body.light-mode .project-card,
+body.light-mode .skill-category,
+body.light-mode .certification-card {
+    background: #ffffff !important;
+    border-color: #ccc !important;
+    color: #000 !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08) !important;
+}
+
+/* Card text */
+body.light-mode .card p,
+body.light-mode .card ul,
+body.light-mode .card li {
+    color: #333 !important;
+}
+
+/* Card Titles FIX */
+body.light-mode .card-title {
+    color: #000 !important;
+}
+
+body.light-mode .card-subtitle {
+    color: #444 !important;
+}
+
+/* Project icons */
+body.light-mode .project-icon {
+    background: #1db954 !important;
+    color: #000 !important;
+}
+
+/* Skill tags */
+body.light-mode .skill-tag {
+    background: #e8ffe8 !important;
+    color: #1db954 !important;
+}
+
+/* GitHub buttons */
+body.light-mode .github-link {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* Contact icons FIX */
+body.light-mode .contact-icon img {
+    filter: invert(0) !important;
+}
+
+/* Footer */
+body.light-mode .footer {
+    background: #ffffff !important;
+    color: #000 !important;
+    border-top: 2px solid #1db954 !important;
+}
+
+body.light-mode .footer-links a {
+    color: #333 !important;
+}
+
+body.light-mode .footer-bottom p {
+    color: #333 !important;
+}
+
+/* Contact Form */
+body.light-mode .contact-form-card {
+    background: #ffffff !important;
+    border-color: #cccccc !important;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group select,
+body.light-mode .form-group textarea {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+    border: 1px solid #bbb !important;
+}
+
+body.light-mode .form-group label {
+    color: #1db954 !important;
+}
+/* Project Card Background & Text */
+body.light-mode .project-card {
+    background: #ffffff !important;
+    color: #000 !important;
+}
+
+/* Project Title */
+body.light-mode .project-card .project-title {
+    color: #000 !important;
+    text-shadow: none !important;
+}
+
+/* Project Description */
+body.light-mode .project-card .project-description {
+    color: #333 !important;
+}
+
+/* Tech Badges */
+body.light-mode .project-card .tech-badge {
+    background: #e8ffe8 !important;
+    color: #1db954 !important;
+    border: 1px solid #b6f5b6 !important;
+}
+
+/* Tech Badge Hover (light version) */
+body.light-mode .tech-badge:hover {
+    background: #1db954 !important;
+    color: #000 !important;
+}
+
+/* Project Header & Icon */
+body.light-mode .project-header {
+    color: #000 !important;
+}
+
+body.light-mode .project-icon {
+    background: #1db954 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+}
+
+/* GitHub Button */
+body.light-mode .github-link {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* Remove dark-glow animation blending */
+body.light-mode .project-card::before {
+    opacity: 0 !important;
 }
